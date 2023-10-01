@@ -1,19 +1,17 @@
 import java.util.Scanner;
  
-public class GuessNumGame {
+public class GuessNumGame{
  
     // Function that implements the
     // number guessing game
     public static void
-    guessingNumberGame()
-    {
+    guessingNumberGame(){
         // Scanner Class
-        Scanner sc = new Scanner(System.in);
+        Scanner sc =new Scanner(System.in);
  
         // Generate the numbers
-        int number = 1 + (int)(100
-                               * Math.random());
- 
+        int number = 1 + (int)(100*Math.random());
+
         // Given K trials
         int K = 5;
  
@@ -28,40 +26,29 @@ public class GuessNumGame {
         // Iterate over K Trials
         for (i = 0; i < K; i++) {
  
-            System.out.println(
-                "Guess the number:");
+            System.out.println("Guess the number:");
  
             // Take input for guessing
             guess = sc.nextInt();
  
             // If the number is guessed
             if (number == guess) {
-                System.out.println(
-                    "Congratulations!"
-                    + " You guessed the number.");
+                System.out.println("Congratulations!" + " You guessed the number.");
                 break;
             }
             else if (number > guess
                      && i != K - 1) {
-                System.out.println(
-                    "The number is "
-                    + "greater than " + guess);
+                System.out.println("The number is " + "greater than " + guess);
             }
             else if (number < guess
                      && i != K - 1) {
-                System.out.println(
-                    "The number is"
-                    + " less than " + guess);
+                System.out.println("The number is" + " less than " + guess);
             }
         }
- 
         if (i == K) {
-            System.out.println(
-                "You have exhausted"
-                + " K trials.");
+            System.out.println("You have exhausted" + " K trials.");
  
-            System.out.println(
-                "The number was " + number);
+            System.out.println("The number was " + number);
         }
     }
  
@@ -69,7 +56,6 @@ public class GuessNumGame {
     public static void
     main(String arg[])
     {
- 
         // Function Call
         guessingNumberGame();
     }
